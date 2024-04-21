@@ -1,0 +1,117 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #212529;
+    font-family: "Press Start 2P", cursive;
+    background-image: url("./assets/background2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom; 
+}
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+.nes-btn {
+    margin: 5px; 
+}
+
+.nes-text {
+    color: white;
+}
+
+#quiz-container {
+    width: 90%;
+    max-width: 600px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 50% 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#result-buttons {
+    text-align: center;
+    display: none;
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #1b041bb6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.151);
+    margin: 20px auto;
+    transform: translateX(-5%); 
+}
+
+#progress-bar {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 5%;
+    background-color: #beca0d; 
+    overflow: hidden; 
+    position: relative; 
+}
+
+#capture-area {
+    text-align: center;
+}
+
+.answers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px; 
+}
+
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#welcome-message {
+    animation: fadeIn 2s ease-out;
+    color: antiquewhite;
+    align-items: center;
+    text-align: center;
+}
+
+#start-button {
+    animation: fadeIn 10s ease-out 0.5s;
+    display: inline-block;
+}
+
+.selected-character {
+    position: relative;
+    top: -50px; 
+    z-index: 10;
+}
+
+#character-selection {
+    text-align: center;
+}
+
+.footer {
+    width: 30%;
+    padding: 0;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: auto;
+    overflow: 0;  
+}
+

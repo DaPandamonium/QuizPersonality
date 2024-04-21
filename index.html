@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Your Coding Soul Language!</title>
+    <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="centered-container">
+    <div class="background">
+    <div id="quiz-container" class="nes-container is-rounded is-dark" style="width: 90%; max-width: 600px; padding: 2rem; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);">
+        <div id="welcome-message">
+            <h2>Welcome to the Quiz! <i class="nes-jp-logo"></i> </h2>
+            <button class="nes-btn is-primary">Choose Character</button>
+        </div>
+
+        <div id="character-selection" style="display: none;">
+            <h3>Choose Your Character</h3>
+            <button id="character1Button">
+                <img src="./assets/character1.png" alt="Character 1">
+            </button>
+            <button id="character2Button">
+                <img src="./assets/character2.png" alt="Character 2">
+            </button>
+        </div>
+        
+        <div id="start-button-container" style="display: none;">
+            <button id="startQuizButton" class="nes-btn is-primary">Start Quiz</button>
+
+        </div>
+
+        <div id="question-screen" style="display: none;">
+            <div id="progress-bar" class="nes-progress is-pattern" style="width: 100%; height: 20px;"></div>
+            <p id="question"></p>
+            <div id="answers"></div>
+        </div>
+
+        <section id="result-screen" style="display: none;">
+            <div id="capture-area">
+                <h2 class="nes-text is-primary">Your Developer Personality is:</h2>
+                <p id="result" class="nes-text is-success"></p>
+                <img id="character-img" src="" alt="Selected Character" style="width: 100px; height: 100px;">
+                <img id="language-logo" src="" alt="Language Logo" style="width: 100px; height: 100px;">
+            </div>
+    </div>
+    </section>
+    <section id="result-buttons" style="display: none; text-align: center;">
+        <div class="button-group">
+            <p class="nes-text">Share your result:</p>
+            <button class="nes-btn" onclick="copyLink()"><img src="./assets/copylink-icon.png" alt="Copy Icon" width="24" height="24"></button>
+            <button class="nes-btn" onclick="downloadResultAsImage()"><img src="./assets/download-icon.png" alt="Download Icon" width="24" height="24"></button>
+            <button class="nes-btn" onclick="shareOnTwitter()">  <i class="nes-icon twitter is-small"></i></button>
+            <button class="nes-btn" onclick="postOnCodedex()"><img src="./assets/codedex.png" alt="Codédex Icon" width="24" height="24"></button>
+        </div>           
+    </section>
+    </div>
+    <footer class="footer">
+        <div class="nes-container is-rounded is-dark">
+            <p><i class="nes-icon github is-small"></i> Made by <a href="https://github.com/DaPandamonium" target="_blank" class="footer-link">DaPanda</a> <i class="nes-icon heart is-small"></i></p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('start-button').addEventListener('mouseover', function () {
+            this.style.backgroundColor = '#4CAF50';
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
+
